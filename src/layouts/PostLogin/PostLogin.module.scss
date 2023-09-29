@@ -1,0 +1,75 @@
+@import "../../utils/_variables.scss";
+
+.layout {
+  display: flex;
+  overflow: hidden;
+  max-height: 100vh;
+
+  .leftSideContainer {
+    width: 100%;
+    max-width: 220px;
+    background-color: $COLOR_WHITE;
+    height: 100vh;
+    overflow: hidden;
+    border-right: 1px solid $COLOR_GRAY_3;
+
+    .logoContainer {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid $COLOR_GRAY_3;
+    }
+
+    .navContainer {
+      padding: 20px 10px;
+      height: calc(100% - 70px);
+      display: grid;
+      grid-auto-rows: min-content;
+      gap: 10px;
+      align-items: center;
+      overflow: auto;
+
+      .navLink {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 20px;
+        font-size: $FONT_SIZE_14;
+        color: $COLOR_BLACK_4;
+        padding: 0 10px;
+        height: 35px;
+
+        .icon {
+          width: 15px;
+        }
+
+        &:hover {
+          background-color: $COLOR_GRAY_SHADOW_3;
+          color: $COLOR_BLACK_1;
+          font-weight: 600;
+          border-radius: 8px;
+        }
+      }
+      .activeLink {
+        background-color: $COLOR_GRAY_SHADOW_3;
+        color: $COLOR_BLACK_1;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+      .logout {
+        cursor: pointer;
+        background: $COLOR_GRAY_2;
+        border-radius: 5px;
+        padding: 2px 7px;
+        color: $COLOR_WHITE;
+        font-weight: 600;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+}

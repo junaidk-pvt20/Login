@@ -1,0 +1,7 @@
+@import "../../utils/variables";
+
+.errorMessage {
+  font-size: $FONT_SIZE_12;
+  color: $COLOR_RED_2;
+  min-height: 20px;
+}

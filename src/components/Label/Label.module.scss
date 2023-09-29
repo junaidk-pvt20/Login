@@ -1,0 +1,11 @@
+@import '../../utils/variables';
+
+.label{
+    margin-bottom: 4px !important;
+    font-size: $FONT_SIZE_14;
+
+    .requiredSign{
+        color: $COLOR_ORANGE_1;
+        font-size: $FONT_SIZE_14;
+    }
+}

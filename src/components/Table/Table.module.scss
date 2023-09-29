@@ -1,0 +1,106 @@
+@import '../../utils/variables';
+
+
+.table{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid $COLOR_GRAY_6;
+
+
+    :global{
+        .rdt_TableHeadRow{
+            border-color: $COLOR_GRAY_6;
+            font-weight: 600;
+        }
+
+        .rdt_TableRow{
+            border-bottom-color: $COLOR_GRAY_6 !important;
+        }
+
+        .rdt_TableHead{
+            z-index: 3;
+        }
+    }
+}
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+
+    .dataRange{
+        font-size: $FONT_SIZE_12;
+        font-weight: 600;
+    }
+
+    .label{
+        font-size: $FONT_SIZE_12;
+    }
+    .rowPerPageDropdown{
+        font-size: $FONT_SIZE_12;
+        border: none;
+        border-bottom: 1px solid $COLOR_GRAY_2;
+        outline: none;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .paginationRightSide{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: 10px;
+
+        .paginationContainer{
+            width: fit-content;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 15px;
+            font-size: $FONT_SIZE_12;
+
+            .arrowBox{    
+                width: 25px;
+                height: 25px;
+                background: $COLOR_BLUE_12;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+
+                .arrow{
+                    width: 8px;
+                }
+
+                .previousArrow{
+                    transform: rotate(90deg);
+                }
+                .nextArrow{
+                    transform: rotate(-90deg);
+                }
+            }
+            
+            .page{
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .activePage{
+                background-color: $COLOR_BLUE_3;
+                color: $COLOR_WHITE;
+                border-radius: 5px;
+            }
+
+            .disabled{
+                opacity: 0.5;
+            }
+        }
+    }
+}

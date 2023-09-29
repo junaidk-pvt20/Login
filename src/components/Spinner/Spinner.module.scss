@@ -1,0 +1,41 @@
+@import '../../utils//_variables.scss';
+
+.spinnerBackground {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $COLOR_GRAY_SHADOW_2;
+    z-index: 1111;
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 8px solid $COLOR_TRANSPERANT;
+        border-right-color: $COLOR_BLUE_2;
+        position: absolute;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+        animation: spin 1s infinite linear;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: inherit;
+            animation: inherit;
+            border-right-color: $COLOR_BLUE_3;
+            animation-duration: 2s;
+
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(1turn)
+            }
+        }
+    }
+}

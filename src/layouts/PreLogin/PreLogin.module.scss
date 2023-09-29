@@ -1,0 +1,89 @@
+@import "../../utils/_variables.scss";
+
+.container {
+  // height: 100%;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: url("../../assets/images/loginBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+    align-items: center;
+
+
+    .rightPanel {
+      width: 50%;
+      display: grid;
+      align-items: center;
+      justify-content: end;
+      padding-right: 80px;
+
+      .insideContainer {
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint_tablet) {
+  .container {
+    .row {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+
+      .leftPanel {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-left: 0px;
+        align-self: end;
+
+        .textContainer {
+          display: none;
+        }
+
+        .bottom_coma {
+          position: relative;
+          width: 40px;
+          top: 59%;
+          left: 56%;
+        }
+      }
+
+      .rightPanel {
+        padding-right: 0px;
+        justify-content: center;
+        width: 100%;
+        align-self: start;
+
+        .insideContainer {
+          left: 20%;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint_mobile_1) {
+  .container{
+    .row{
+
+      .leftPanel{
+        .logo{
+          width: 200px;
+        }
+      }
+    
+    }
+  }
+
+}

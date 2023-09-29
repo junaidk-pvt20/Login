@@ -1,0 +1,37 @@
+@import "../../utils/variables";
+
+.loginForm{
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.header{
+    font-size: $FONT_SIZE_20;
+    // text-align: center;
+    font-weight: 600;
+    // margin-bottom: 20px;
+}
+.subHeader{
+    font-size: $FONT_SIZE_16;
+    color:#858585;
+}
+
+.formContainer{
+    display: grid;
+    margin-top: 20px;
+
+    .loginButton{
+        margin: 10px 0;
+    }
+}
+
+@media  (max-width: $breakpoint_mobile_1) {
+    .header{
+        font-size: $FONT_SIZE_20;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+}

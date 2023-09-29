@@ -1,0 +1,55 @@
+@import '../../utils/variables';
+
+.inputContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+   
+
+    .invalid{
+        border-color: $COLOR_RED_4 !important;
+
+        &:focus{
+            box-shadow: 0 0 5px 0px $COLOR_RED_4 !important;
+        }
+        
+    }
+
+    .passwordInput{    
+        padding-right: 50px;
+        background-position: right calc(2.5em + 0.1875rem) center !important;
+    }
+
+    .searchInput{
+        padding-left: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .searchIcon{
+        position: absolute;
+        left: 11px;
+        height: 12px;
+    }
+
+    .eyeIcon{
+        position: absolute;
+        top: 4px;
+        right: 12px;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+.inputField{
+    border-color: $COLOR_GRAY_2;
+    outline: none !important;
+    height: 35px;
+
+    &:focus{
+        outline: none !important;
+        box-shadow: 0 0 5px 0px $COLOR_BLUE_2 !important;
+        border-color: $COLOR_BLUE_2 !important;
+    }
+}

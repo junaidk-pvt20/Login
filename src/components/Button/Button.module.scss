@@ -1,0 +1,34 @@
+@import '../../utils/variables';
+
+.button{
+    height: 35px !important;
+    font-size: $FONT_SIZE_12 !important;
+    white-space: nowrap;
+}
+
+.outlineButton{
+    border-color: $COLOR_GRAY_3;
+    color: $COLOR_BLACK_1;
+
+    &:hover{
+        background-color: $COLOR_GRAY_3;
+        opacity: 0.9;
+    }
+    &:active{
+        background-color: $COLOR_GRAY_3 !important;
+        opacity: 1;
+    }
+}
+
+.primaryButton{
+    background-color: $COLOR_BLUE_3 !important;
+
+    &:hover{
+        background-color: $COLOR_BLUE_15 !important;
+        opacity: 0.9;
+    }
+    &:active{
+        background-color: $COLOR_BLUE_15 !important;
+        opacity: 1;
+    }
+}
