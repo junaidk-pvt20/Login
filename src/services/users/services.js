@@ -31,3 +31,18 @@ export const getUserDetails = async (params) => {
         console.log('error', error)
     }
 }
+
+export const putUser = async (params) => {
+    // Not able to understand the payload structure want some more clarity
+    // try {
+    //     const res = await axiosPrivate.put(`${API_ENDPOINTS.SINGLE_USERS}${params}`)
+    //     if (res?.status === 200) {
+    //         return {
+    //             status: API_STATUS.SUCCESS,
+    //             data: res?.data?.data
+    //         }
+    //     }
+    // } catch (error) {
+    //     console.log('error', error)
+    // }
+}

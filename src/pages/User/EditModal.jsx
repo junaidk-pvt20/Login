@@ -7,6 +7,7 @@ import { API_STATUS } from "../../utils/constants";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { EMAIL_REGEX } from "../../utils/regEx";
+import { putUser } from "../../services/users/services";
 
 const EditModal = ({
     styles,
