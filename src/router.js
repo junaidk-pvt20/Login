@@ -42,5 +42,10 @@ export const router = createBrowserRouter([
             },
 
         ]
-    }
+    },
+    {
+        path: "/*",
+        // I haven't made 404 page I will be routing to login page if you change url
+        element: <Navigate to="/login" replace />,
+    },
 ])
