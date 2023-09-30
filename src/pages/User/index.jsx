@@ -70,7 +70,7 @@ const Index = () => {
                         className={styles.actionIcons}
                     >
                         <img
-                            className="{styles.actionIcon}"
+                            className={styles.actionIcon}
                             src={editIcon}
                             alt="Edit Row"
                             onClick={() => handleEdit(row?.id)}

@@ -23,10 +23,21 @@
   padding: 15px 10px;
 }
 
+
+
 .candidateName {
   font-weight: 600;
   color: $COLOR_BLUE_3;
   cursor: pointer;
+}
+.actionIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .actionIcon {
+    height: 15px;
+    cursor: pointer;
+  }
 }
 
 .applicationDiv {
