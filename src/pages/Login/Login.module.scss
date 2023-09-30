@@ -26,6 +26,18 @@
     }
 }
 
+.text{
+    text-align: center;
+    font-size:  $FONT_SIZE_12;
+    width: 275px;
+    margin: 5px 0px;
+
+    .link{
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
 @media  (max-width: $breakpoint_mobile_1) {
     .header{
         font-size: $FONT_SIZE_20;

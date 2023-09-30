@@ -80,7 +80,7 @@ const Index = () => {
             },
         },
     ];
-    const getUserAPI = async (params) => {
+    const getUserAPI = async () => {
         try {
             const res = await getUsers();
             setUsers(res?.data);

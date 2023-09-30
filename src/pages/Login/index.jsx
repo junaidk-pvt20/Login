@@ -24,7 +24,7 @@ const Index = () => {
     reset,
   } = useForm({
     defaultValues: {
-      email: "",
+      user: "",
       password: "",
     },
     mode: "all",
@@ -33,12 +33,13 @@ const Index = () => {
 
   const onSubmit = async (data) => {
     const payload = {
-      usr: data?.email,
+      usr: data?.user,
       pwd: data?.password,
     };
     setLoading(true);
     try {
       const res = await loginUser(payload);
+      console.log('res', res)
       if (res?.data?.message?.msg === "success") {
         cookies.set(COOKIES.ACCESS_TOKEN, res?.data?.message?.data?.access_token, {
           path: PATH.DEFAULT,
@@ -68,30 +69,26 @@ const Index = () => {
         >
           <Field
             controller={{
-              name: "email",
+              name: "user",
               control: control,
               render: ({ field }) => {
                 return (
                   <Input
-                    {...register("email", {
-                      required: "Email is required.",
-                      // pattern: {
-                      //   value: EMAIL_REGEX,
-                      //   message: "Invalid email format",
-                      // },
+                    {...register("user", {
+                      required: "User is required.",
                     })}
-                    placeholder="user@example.com"
-                    invalid={errors.email}
+                    placeholder="Administrator"
+                    invalid={errors.user}
                     {...field}
                   />
                 );
               },
             }}
             error={{
-              errorMessage: errors?.email?.message,
+              errorMessage: errors?.user?.message,
             }}
             label={{
-              label: "Email",
+              label: "User Name",
               isRequiredSign: true,
             }}
           />
@@ -107,7 +104,7 @@ const Index = () => {
                       required: "Password is required.",
                     })}
                     type="password"
-                    placeholder="Password"
+                    placeholder="12345"
                     invalid={errors.password}
                     {...field}
                   />
