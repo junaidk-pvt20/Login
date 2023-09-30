@@ -6,19 +6,19 @@ import { useNavigate } from 'react-router-dom';
 import { PATH } from "./../../utils/pagePath";
 import styles from "./UserDetails.module.scss";
 import Modal from "../../components/Modal";
-// import EditModal from "./EditModal";
+import EditModal from "./EditModal";
 
 const Index = () => {
     const [users, setUsers] = useState([])
     const [openModal, setOpenModal] = useState(false);
     const navigate = useNavigate();
     console.log('users', users)
-    // const handleEdit = async (id) => {
-    //     setOpenModal(true);
-    // }
-    // const closeModal = () => {
-    //     setOpenModal(!openModal);
-    // };
+    const handleEdit = async (id) => {
+        setOpenModal(true);
+    }
+    const closeModal = () => {
+        setOpenModal(!openModal);
+    };
     const column = [
         {
             name: "Name",
@@ -73,7 +73,7 @@ const Index = () => {
                             className="{styles.actionIcon}"
                             src={editIcon}
                             alt="Edit Row"
-                        // onClick={() => handleEdit(row?.id)}
+                            onClick={() => handleEdit(row?.id)}
                         />
                     </div>
                 );
@@ -98,13 +98,13 @@ const Index = () => {
             // className={styles.candidatesTable}
 
             />
-            {/* <EditModal
+            <EditModal
                 setOpenModal={setOpenModal}
                 styles={styles}
                 Modal={Modal}
                 openModal={openModal}
                 closeModal={closeModal}
-            /> */}
+            />
         </>
     )
 }

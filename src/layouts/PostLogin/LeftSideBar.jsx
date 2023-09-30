@@ -23,13 +23,13 @@ const LeftSideBar = (props) => {
   return (
     <div className={styles.leftSideContainer}>
       <div className={styles.logoContainer}>
-        <h2> JUNAID KHAN </h2>
+        <h4> JUNAID KHAN </h4>
       </div>
       <div className={styles.navContainer}>
         {sideBarNavigation.map((data) => (
           <NavLink
             key={data.id}
-            className={({ isActive, isPending }) =>
+            className={({ isActive }) =>
               `${styles.navLink} ${isActive && styles.activeLink}`
             }
             to={data.path}
