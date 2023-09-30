@@ -7,8 +7,10 @@ import { PATH } from "./../../utils/pagePath";
 import styles from "./UserDetails.module.scss";
 import Modal from "../../components/Modal";
 import EditModal from "./EditModal";
+import Spinner from '../../components/Spinner';
 
 const Index = () => {
+    const [loading, setLoading] = useState(false);
     const [users, setUsers] = useState([])
     const [openModal, setOpenModal] = useState(false);
     const navigate = useNavigate();
@@ -82,8 +84,10 @@ const Index = () => {
     ];
     const getUserAPI = async () => {
         try {
+            setLoading(true)
             const res = await getUsers();
             setUsers(res?.data);
+            setLoading(false)
         } catch (error) { }
     }
     useEffect(() => {
@@ -92,6 +96,7 @@ const Index = () => {
 
     return (
         <>
+            {loading && <Spinner />}
             <Table
                 columns={column}
                 data={users}
