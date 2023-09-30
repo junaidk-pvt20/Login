@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import styles from "./PostLogin.module.scss";
-import LOGO from "../../assets/images/blackLogo.png";
 import { sideBarNavigation } from "../../utils/sideBarNavigation";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Cookies } from "react-cookie";

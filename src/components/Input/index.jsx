@@ -4,7 +4,6 @@ import { Input } from 'reactstrap'
 import styles from './Input.module.scss'
 import eyeIconOpen from '../../assets/icons/eye.svg'
 import eyeIconClose from '../../assets/icons/eye-slash.svg'
-import searchIcon from '../../assets/icons/search.png'
 
 const Index = (props) => {
     const [type, setType] = useState(props?.type || "text")
@@ -19,7 +18,6 @@ const Index = (props) => {
 
     return (
         <div className={classNames(styles.inputContainer, props?.containerclassname)}>
-            {props?.type === "search" ? <img className={classNames(styles.searchIcon)} src={searchIcon} alt='search Icon' /> : ''}
             <Input
                 {...props}
                 className={

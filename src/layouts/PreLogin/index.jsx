@@ -1,9 +1,6 @@
 import React, { memo } from "react";
 import { Outlet } from "react-router-dom";
-import { Container, Row, Col } from "reactstrap";
 import styles from "./PreLogin.module.scss";
-import LOGO from "../../assets/images/whiteLogo.png";
-import COMA from "../../assets/images/coma.png";
 
 const Index = () => {
   return (
